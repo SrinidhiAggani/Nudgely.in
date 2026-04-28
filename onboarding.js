@@ -273,6 +273,7 @@ let historyStack = [];
 const state = {};
 
 document.addEventListener('DOMContentLoaded', () => {
+<<<<<<< HEAD
     // Check for reset parameter
     const urlParams = new URLSearchParams(window.location.search);
     if (urlParams.get('reset') === 'true') {
@@ -281,6 +282,8 @@ document.addEventListener('DOMContentLoaded', () => {
         window.history.replaceState({}, document.title, window.location.pathname);
     }
 
+=======
+>>>>>>> b8308d06b7da5b357e04415773b056e1b79cf435
     // Load state from local storage if it exists
     const savedData = localStorage.getItem('nudgeQuizData');
     const isFinished = localStorage.getItem('nudgeQuizFinished');
