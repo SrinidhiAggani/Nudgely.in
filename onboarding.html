@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onboarding - Nudgely</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="onboarding-page">
+
+    <nav class="onboarding-nav">
+        <a href="index.html" class="logo">nudgely<span class="text-accent">.in</span></a>
+        <div class="progress-indicator">Step 1</div>
+    </nav>
+    <div class="progress-container">
+        <div class="progress-bar" style="width: 5%;"></div>
+    </div>
+
+    <!-- QUIZ CONTAINER -->
+    <div class="onboarding-container reveal active" id="quiz-container">
+        
+        <div class="question-header">
+            <h2 id="q-title">Loading...</h2>
+            <p id="q-subtitle" style="display: none;"></p>
+        </div>
+
+        <div class="options-grid" id="options-grid">
+            <!-- Options populated by JS -->
+        </div>
+
+        <div id="text-input-container" style="display: none; width: 100%; max-width: 600px; margin: 0 auto 3rem;">
+            <textarea id="text-answer" class="form-control" rows="5" placeholder="Type your answer here..." style="width: 100%; resize: vertical;"></textarea>
+        </div>
+
+        <div class="onboarding-actions" style="display: flex; gap: 1rem; justify-content: center;">
+            <button class="btn btn-outline back-btn" id="back-btn" style="display: none;">Back</button>
+            <button class="btn btn-primary continue-btn" id="next-btn" disabled>Next</button>
+        </div>
+        
+    </div>
+
+    <!-- LOADING SCREEN -->
+    <div class="onboarding-container hidden" id="loading-container" style="flex-direction: column; align-items: center; justify-content: center; min-height: 50vh;">
+        <div class="spinner"></div>
+        <h2>Finding the best career options for you</h2>
+    </div>
+
+    <!-- RESULTS SCREEN -->
+    <div class="onboarding-container hidden" id="results-container">
+        <div class="question-header">
+            <h2>Your Top Career Matches</h2>
+            <p>Based on your unique profile, here are the paths that fit you best.</p>
+        </div>
+        
+        <div class="results-grid" id="results-grid">
+            <!-- Results populated by JS -->
+        </div>
+        
+        <div class="onboarding-actions" style="margin-top: 3rem; text-align: center; display: flex; justify-content: center; gap: 1rem;">
+            <button class="btn btn-outline" onclick="localStorage.removeItem('nudgeQuizFinished'); localStorage.removeItem('nudgeQuizData'); window.location.reload();">Retake Quiz</button>
+            <button class="btn btn-primary" onclick="window.location.href='dashboard.html'">Return to Dashboard</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="onboarding.js"></script>
+</body>
+</html>

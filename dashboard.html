@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Nudgely</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body class="dashboard-body">
+    <!-- Glowing background elements -->
+    <div class="dash-glow dash-glow-1"></div>
+    <div class="dash-glow dash-glow-2"></div>
+
+    <div class="dashboard-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <a href="index.html" class="logo">nudgely<span class="text-accent">.in</span></a>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                    Overview
+                </a>
+                <a href="#" class="nav-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+                    My Pathways
+                </a>
+
+                <a href="#" class="nav-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                    Micro-Courses
+                </a>
+                <a href="#" class="nav-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                    Projects
+                </a>
+            </nav>
+            
+            <div class="sidebar-bottom">
+                <a href="#" class="nav-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                    Settings
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header Profile -->
+            <header class="profile-header">
+                <div class="profile-info-wrap">
+                    <div class="profile-avatar">SA</div>
+                    <div class="profile-details">
+                        <h2 id="dash-user-name">Srinidhi Aggani</h2>
+                        <p class="text-accent" id="dash-user-username" style="margin-bottom: 0.3rem; font-weight: 500;">@srinidhi</p>
+                        <p class="text-muted" id="dash-user-edu">College Student • Enrolled 2026</p>
+                    </div>
+                </div>
+                <button class="btn btn-outline" id="edit-profile-btn">Edit Profile</button>
+            </header>
+
+            <!-- Stats Row -->
+            <div class="stats-row">
+                <div class="stat-card">
+                    <h3 id="stat-courses">2</h3>
+                    <p>Enrolled Courses</p>
+                </div>
+                <div class="stat-card">
+                    <h3>12</h3>
+                    <p>Hours Learned</p>
+                </div>
+                <div class="stat-card">
+                    <h3>45%</h3>
+                    <p>Overall Progress</p>
+                </div>
+                <div class="stat-card">
+                    <h3>1</h3>
+                    <p>Pathway Unlocked</p>
+                </div>
+            </div>
+
+            <!-- My Enrolled Courses -->
+            <div class="dashboard-section">
+                <div class="section-title-row">
+                    <h3>My Enrolled Courses</h3>
+                    <button class="btn btn-primary btn-sm">Browse Catalog</button>
+                </div>
+                
+                <div class="courses-grid" id="dash-courses-grid">
+                    <!-- dynamically injected by JS based on quiz results -->
+                </div>
+            </div>
+            
+            <!-- Personal Details / Settings -->
+            <div class="dashboard-section" id="my-details-section" style="display: none;">
+                <h3>My Details</h3>
+                <div class="details-card">
+                    <div class="detail-row">
+                        <span class="detail-label">Full Name</span>
+                        <span class="detail-value">Srinidhi Aggani</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Email</span>
+                        <span class="detail-value">srinidhi@nudgely.in</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Current Education</span>
+                        <span class="detail-value" id="dash-edu-detail">College Student</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Primary Interest</span>
+                        <span class="detail-value" id="dash-interest-detail">Technology & Systems</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Career Stage</span>
+                        <span class="detail-value" id="dash-career-stage">Discovering options</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Target Career</span>
+                        <span class="detail-value" id="dash-career-goal">Exploring</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Learning Style</span>
+                        <span class="detail-value" id="dash-learning-style">Hands-on experience</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Availability</span>
+                        <span class="detail-value" id="dash-availability">Flexible</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Core Motivation</span>
+                        <span class="detail-value" id="dash-motivation">Impact</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="dashboard.js?v=2"></script>
+    <script>
+        // Ensure the toggle works even if external JS is cached or delayed
+        (function() {
+            const btn = document.getElementById('edit-profile-btn');
+            const section = document.getElementById('my-details-section');
+            if (btn && section) {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    if (section.style.display === 'none' || section.style.display === '') {
+                        section.style.display = 'block';
+                    } else {
+                        section.style.display = 'none';
+                    }
+                });
+            }
+        })();
+    </script>
+</body>
+</html>
